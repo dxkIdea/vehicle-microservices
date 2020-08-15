@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: gateway-server
+
+  cloud:
+    nacos:
+      #Nacos配置中心地址
+      server-addr: 127.0.0.1
+      config:
+        #dataID后缀及内容文件格式 默认properties
+        file-extension: yml
+        #配置中心组名称，默认DEFAULT_GROUP
+        group: DEFAULT_GROUP
+        #配置内容的编码方式,默认UTF-8
+        encode: UTF-8
+        #获取配置的超时时间,默认3000ms
+        timeout: 3000
+        #配置的命名空间 常用场景之一是不同环境的配置的区分隔离，例如开发测试环境和生产环境的资源隔离等。
+        namespace: a97e8821-3eaf-41bd-97f8-1fbd9319d630
+        #是否开启监听和自动刷新,默认true
+        refresh-enabled: true
