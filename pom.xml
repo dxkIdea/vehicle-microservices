@@ -10,6 +10,7 @@
     <modules>
         <module>vehicle-common</module>
         <module>vehicle-cloud-gateway</module>
+        <module>vehicle-cloud-user</module>
     </modules>
     <packaging>pom</packaging>
     <description>基于SpringCloud Alibaba等微服务框架实现</description>
@@ -38,6 +39,10 @@
         <mybatis-plus.version>3.3.2</mybatis-plus.version>
         <!--Mysql驱动版本-->
         <mysql-connector.version>8.0.20</mysql-connector.version>
+        <!--knife4j增加工具版本-->
+        <knife4j-swagger2.version>2.0.4</knife4j-swagger2.version>
+        <!--io.springfox版本-->
+        <io.springfox.version>2.7.0</io.springfox.version>
     </properties>
 
     <dependencyManagement>
@@ -58,7 +63,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
             <!--Mybatis-Plus版本-->
             <dependency>
                 <groupId>com.baomidou</groupId>
@@ -70,6 +74,23 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql-connector.version}</version>
+            </dependency>
+            <!--knife4j-swagger依赖版本定义-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j-swagger2.version}</version>
+            </dependency>
+            <!--io.springfox版本定义-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${io.springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${io.springfox.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
